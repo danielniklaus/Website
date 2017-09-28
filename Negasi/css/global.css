@@ -1,0 +1,752 @@
+/*
+ Table Of Contents
+ 1.) Eric Meyer's Reset
+ 2.) Font Face
+ 3.) Global Typography
+ 3.0.2) Global Headings
+ 3.0.3) Form Elements
+ 3.0.4) List styles
+ 3.0.5) General Text Formatting
+ 3.0.6) Link elements
+ 3.0.7) Table Elements
+ 3.0.8) Button Styles
+ 3.0.9) Sprite Icons
+ 4.) Site Wide Content
+ 5.) Header Style
+ 6.) Footer Style
+ ===============================================*/
+
+/*
+ 1.) Eric Meyer's Reset
+ ----------------------------------------*/
+/**
+ * Eric Meyer's Reset CSS v2.0 (http://meyerweb.com/eric/tools/css/reset/)
+ * http://cssreset.com
+ */
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after, q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+/*2.) Font Face */
+@font-face {
+	font-family: 'dancing_scriptbold';
+	src: url('../fonts/dancingscript-bold-webfont.eot');
+	src: url('../fonts/dancingscript-bold-webfontd41d.eot?#iefix') format('embedded-opentype'), url('../fonts/dancingscript-bold-webfont.woff2') format('woff2'), url('../fonts/dancingscript-bold-webfont.woff') format('woff'), url('../fonts/dancingscript-bold-webfont.ttf') format('truetype'), url('../fonts/dancingscript-bold-webfont.svg#dancing_scriptbold') format('svg');
+}
+@font-face {
+	font-family: 'dancing_scriptregular';
+	src: url('../fonts/dancingscript-regular-webfont.eot');
+	src: url('../fonts/dancingscript-regular-webfontd41d.eot?#iefix') format('embedded-opentype'), url('../fonts/dancingscript-regular-webfont.woff2') format('woff2'), url('../fonts/dancingscript-regular-webfont.woff') format('woff'), url('../fonts/dancingscript-regular-webfont.ttf') format('truetype'), url('../fonts/dancingscript-regular-webfont.svg#dancing_scriptregular') format('svg');
+}
+@font-face {
+	font-family: 'montserratbold';
+	src: url('../fonts/montserrat-bold-webfont.eot');
+	src: url('../fonts/montserrat-bold-webfontd41d.eot?#iefix') format('embedded-opentype'), url('../fonts/montserrat-bold-webfont.woff2') format('woff2'), url('../fonts/montserrat-bold-webfont.woff') format('woff'), url('../fonts/montserrat-bold-webfont.ttf') format('truetype'), url('../fonts/montserrat-bold-webfont.svg#montserratbold') format('svg');
+}
+@font-face {
+	font-family: 'montserratregular';
+	src: url('../fonts/montserrat-regular-webfont.eot');
+	src: url('../fonts/montserrat-regular-webfontd41d.eot?#iefix') format('embedded-opentype'), url('../fonts/montserrat-regular-webfont.woff2') format('woff2'), url('../fonts/montserrat-regular-webfont.woff') format('woff'), url('../fonts/montserrat-regular-webfont.ttf') format('truetype'), url('../fonts/montserrat-regular-webfont.svg#montserratregular') format('svg');
+}
+@font-face {
+	font-family: 'noto_serifbold';
+	src: url('../fonts/notoserif-bold-webfont.eot');
+	src: url('../fonts/notoserif-bold-webfontd41d.eot?#iefix') format('embedded-opentype'), url('../fonts/notoserif-bold-webfont.woff2') format('woff2'), url('../fonts/notoserif-bold-webfont.woff') format('woff'), url('../fonts/notoserif-bold-webfont.ttf') format('truetype'), url('../fonts/notoserif-bold-webfont.svg#noto_serifbold') format('svg');
+}
+@font-face {
+	font-family: 'noto_serifbold_italic';
+	src: url('../fonts/notoserif-bolditalic-webfont.eot');
+	src: url('../fonts/notoserif-bolditalic-webfontd41d.eot?#iefix') format('embedded-opentype'), url('../fonts/notoserif-bolditalic-webfont.woff2') format('woff2'), url('../fonts/notoserif-bolditalic-webfont.woff') format('woff'), url('../fonts/notoserif-bolditalic-webfont.ttf') format('truetype'), url('../fonts/notoserif-bolditalic-webfont.svg#noto_serifbold_italic') format('svg');
+}
+@font-face {
+	font-family: 'noto_serifitalic';
+	src: url('../fonts/notoserif-italic-webfont.eot');
+	src: url('../fonts/notoserif-italic-webfontd41d.eot?#iefix') format('embedded-opentype'), url('../fonts/notoserif-italic-webfont.woff2') format('woff2'), url('../fonts/notoserif-italic-webfont.woff') format('woff'), url('../fonts/notoserif-italic-webfont.ttf') format('truetype'), url('../fonts/notoserif-italic-webfont.svg#noto_serifitalic') format('svg');
+}
+@font-face {
+	font-family: 'noto_serifregular';
+	src: url('../fonts/notoserif-regular-webfont.eot');
+	src: url('../fonts/notoserif-regular-webfontd41d.eot?#iefix') format('embedded-opentype'), url('../fonts/notoserif-regular-webfont.woff2') format('woff2'), url('../fonts/notoserif-regular-webfont.woff') format('woff'), url('../fonts/notoserif-regular-webfont.ttf') format('truetype'), url('../fonts/notoserif-regular-webfont.svg#noto_serifregular') format('svg');
+}
+
+/*
+ 3.0.1.) Global Typography
+ ----------------------------------------*/
+*, :before, :after {
+	box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+}
+html {
+	-ms-text-size-adjust: 100%;
+	-webkit-text-size-adjust: 100%;
+	font-size: 100%;
+}
+body {
+	font-size: 62.5%;
+	font-family: 'montserratregular';
+	color: #202020;
+}
+/*
+ 3.0.2) Global Headings
+ -----------------------------*/
+h1, h2, h3, h4, h5, h6 {
+	font-weight: normal;
+	color: #161e21;
+}
+h1, .h1, h2, .h2, h3, .h3 {
+	margin: 0;
+	line-height: 1;
+}
+h1 {
+	font-size: 120px;
+	font-family: 'montserratbold';
+	font-weight: 400;
+	color: #fff;
+}
+.h1 {
+
+}
+h2 {
+	color: #202020;
+	font-family: "montserrat";
+	font-size: 25px;
+	font-weight: 400;
+	letter-spacing: 2px;
+	line-height: 29px;
+	margin-bottom: 24px;
+	padding-bottom: 50px;
+	position: relative;
+	text-align: center;
+	text-transform: uppercase;
+	word-spacing: 0;
+}
+h3 {
+	font-size: 23px;
+	color: #202020;
+	font-family: 'montserratregular';
+	text-transform: uppercase;
+	letter-spacing: 1px;
+}
+h4 {
+
+}
+h5 {
+
+}
+h6 {
+
+}
+/*
+ 3.0.3) Form Elements
+ -----------------------------*/
+button, input, optgroup, select, textarea {
+	margin: 0;
+	padding: 0;
+	font-size: 100%;
+	color: inherit;
+	background: #fff;
+	border: 1px solid #ccc;
+	font-family: 'montserratregular';
+}
+input {
+	line-height: normal;
+}
+input:focus, select:focus, textarea:focus, button:focus {
+	outline: 0;
+}
+input[type="checkbox"], input[type="radio"] {
+	padding: 0;
+	border: none;
+}
+button, input[type="button"], input[type="reset"], input[type="submit"], input[type="file"] {
+	-webkit-appearance: none;
+	cursor: pointer;
+	line-height: normal;
+	overflow: visible;
+}
+input[type="text"] {
+	border-radius: 0;
+}
+button[disabled], input[disabled] {
+	cursor: default;
+	color: #999;
+	border-color: #ccc;
+}
+button::-moz-focus-inner, input::-moz-focus-inner {
+	padding: 0;
+	border: 0;
+}
+
+/*
+ 3.0.4) List Styles
+ ---------------------------------*/
+ul, ol, dl {
+	font-size: 100%;
+	line-height: 1.5;
+}
+li, dt {
+	line-height: 1.5em;
+}
+dl {
+	margin: 0 0 1em 0;
+}
+dd {
+	margin: 0 0 1em 0.8em;
+}
+ul {
+	list-style-type: none;
+	margin: 0 0 1em 0;
+}
+ol {
+	list-style-type: decimal;
+	margin: 0 0 1em 0;
+}
+ul ul, ol ul {
+	list-style-type: circle;
+	margin-top: 0;
+}
+ol ol {
+	list-style-type: lower-latin;
+	margin-top: 0;
+}
+
+/*
+ 3.0.5) General Text Formatting
+ -----------------------------------*/
+p {
+	font-size: 14px;
+	color: #202020;
+	line-height: 25px;
+	font-family: 'noto_serifregular';
+}
+blockquote, cite, q, var, dfn {
+	font-style: italic;
+}
+blockquote {
+	background: transparent;
+	color: #666666;
+}
+small {
+	/* font-size: 12px; */
+	font-size: 85.71429%;
+	line-height: 1.75;
+}
+pre, code, kbd, tt, samp, var {
+	font-size: 100%;
+}
+h2 strong {
+	font-family: "montserratbold";
+	font-weight: 400;
+}
+h2::before {
+	background: hsla(0, 0%, 0%, 0) url("../images/line-2.png") no-repeat scroll center center;
+	content: "";
+	display: block;
+	height: 20px;
+	left: 50%;
+	position: absolute;
+	top: 53%;
+	transform: translate(-50%,37%);
+	width: 100%;
+}
+pre {
+	font-size: 100%;
+	line-height: 1.5;
+	margin: 0 0 1.5em 0;
+	white-space: pre;
+	white-space: pre-wrap;
+	word-wrap: break-word;
+}
+pre, code {
+	color: #880000;
+}
+kbd, samp, var {
+	color: #666666;
+	font-weight: bold;
+}
+acronym, abbr {
+	border-bottom: 1px #aaa dotted;
+	font-variant: small-caps;
+	cursor: help;
+}
+sub, sup {
+	font-size: 75%;
+	line-height: 0;
+	position: relative;
+	vertical-align: baseline;
+}
+sup {
+	top: -0.5em;
+	font-size: 16px;
+}
+sub {
+	bottom: -0.25em;
+	font-size: 12px;
+}
+img {
+	max-width: 100%;
+/*	height: auto; */
+}
+/*
+ 3.0.6) Link style
+ -------------------------*/
+a {
+	color: #ffffff;
+	text-decoration: none;
+}
+a:hover, a:focus {
+
+	text-decoration: none;
+	outline: none;
+}
+a:hover {
+	color: #ffffff;
+}
+a:active {
+	outline: none;
+}
+
+/*
+ 3.0.7) Table Elements
+ --------------------------*/
+table {
+	width: 100%;
+	border-collapse: collapse;
+	color: #444444;
+	border-top: 1px #ccc solid;
+	border-bottom: 1px #ccc solid;
+	margin: 0 0 1.35714em 0;
+}
+caption {
+	font-variant: small-caps;
+}
+th, td {
+	line-height: 1.5em;
+	vertical-align: top;
+	padding: 0.71429em 0.5em;
+}
+th *:first-child, td *:first-child {
+	margin-top: 0;
+}
+thead th {
+	text-align: left;
+	color: #000;
+	border-bottom: 2px #000 solid;
+}
+tbody th {
+	text-align: left;
+	border-top: 1px solid #ccc;
+}
+tbody td {
+	text-align: left;
+	border-top: 1px solid #ccc;
+}
+
+/*
+ 3.0.8) Button Styles
+ -------------------------*/
+.btn, input.btn, button.btn {
+	border: 1px solid #202020;
+	color: #202020;
+	display: inline-block;
+	font-size: 11px;
+	letter-spacing: 0.7px;
+	padding: 11px 21px;
+	text-transform: uppercase;
+	transition: all 0.4s ease 0s;
+	border-radius: 0;
+}
+button.btn-submit {
+	padding: 0px 28px;
+	line-height: 44px;
+	font-size: 13px;
+	color: #fff;
+	font-family: 'Raleway', sans-serif;
+	font-weight: 500;
+	text-align: center;
+	background: #0e111a;
+	text-transform: uppercase;
+	-webkit-border-radius: 0;
+	-moz-border-radius: 0;
+	border-radius: 0;
+	border: none;
+}
+.btn:hover {
+	color: #fff !important;
+}
+
+/*
+ 3.0.9) Sprite Icons
+ -------------------------*/
+/* Clear Floated Elements
+ ----------------------------------------------------------------------------------------------------*/
+
+/* http://sonspring.com/journal/clearing-floats */
+
+.clear {
+	clear: both;
+	display: block;
+	overflow: hidden;
+	visibility: hidden;
+	width: 0;
+	height: 0;
+}
+
+/* http://perishablepress.com/press/2008/02/05/lessons-learned-concerning-the-clearfix-css-hack */
+
+.clearfix:after {
+	clear: both;
+	content: ' ';
+	display: block;
+	font-size: 0;
+	line-height: 0;
+	visibility: hidden;
+	width: 0;
+	height: 0;
+}
+
+.clearfix {
+	display: inline-block;
+}
+
+* html .clearfix {
+	height: 1%;
+}
+
+.clearfix {
+	display: block;
+}
+/*
+ 4.) Site Wide Content
+ ------------------------------*/
+#wrapper {
+	width: 100%;
+}
+.nav > li > a:hover, .nav > li > a:focus {
+	text-decoration: none;
+	background: none !important;
+}
+.navbar-collapse {
+	padding: 0 0 0 0px;
+}
+.homepage-two .navbar-collapse{
+	padding: 0 0 0 60px;
+}
+.main-btn {
+	min-width: 200px;
+	padding-left: 25px;
+	display: inline-block;
+	background: #ef9353;
+	color: #fff;
+	background: #ef9353;
+	text-transform: uppercase;
+	font-family: 'montserratbold';
+	font-size: 12px;
+	min-height: 46px;
+	line-height: 46px;
+	letter-spacing: 2px;
+	position: relative;
+	margin-top: 72px;
+}
+.main-btn:after {
+	width: 46px;
+	height: 100%;
+	position: absolute;
+	top: 0;
+	right: 0;
+	border-left: 1px solid #f3ae7e;
+	content: "\f054";
+	color: #ffffff;
+	line-height: 46px;
+	text-align: center;
+	font-size: 15px;
+	font: normal normal normal 14px/1 FontAwesome;
+	font-weight: 300;
+	padding-top: 17px;
+}
+.main-btn:hover {
+	color: #fff;
+}
+#wrapper.boxed {
+	overflow: hidden !important;
+}
+#wrapper.boxed.blog #header.header .navbar-nav > li {
+	margin-left: 29px;
+}
+/*sticky header style
+ ------------------------------*/
+body #header {
+	-webkit-transition: all 0.4s ease-in-out;
+	-moz-transition: all 0.4s ease-in-out;
+	-ms-transition: all 0.4s ease-in-out;
+	-o-transition: all 0.4s ease-in-out;
+	transition: all 0.4s ease-in-out;
+}
+body #header.fixed {
+	position: fixed !important;
+	width: 100%;
+	left: 0;
+	right: 0;
+	top: 0;
+	margin: 0 auto;
+	z-index: 99;
+}
+body #header.intelligent {
+	position: fixed !important;
+	top: 0;
+	left: 0;
+	right: 0;
+	width: 100%;
+	z-index: 99;
+}
+body #header.up {
+	top: -162px;
+	opacity: 0;
+	visibility: hidden;
+}
+body #header.down {
+	top: 0;
+	opacity: 1;
+	visibility: visible;
+}
+.top-m {
+	margin-top: 80px !important;
+}
+.homepage-1 .top-m,.homepage-three .top-m {
+	margin-top:0 !important;
+}
+
+/*
+ 5.) Header Styles
+ ------------------------------*/
+/*=============================================================================Header-one style===============================================================*/
+#header.header-one{
+	padding: 40px 0px;	
+	position: absolute;
+	left: 0;
+	top: 0;
+	width: 100%;
+	z-index: 99999;
+	right: 0;
+}
+#header.header-one.fixed,#header.header-one.intelligent{
+	background: rgba(243,243,243,0.5);
+}
+#header.header-one .logo {
+	display: inline-block;
+}
+#header.header-one .nav li a {
+	font-size: 13.5px;
+	font-family: 'montserratregular';
+	color: #202020;
+	text-transform: uppercase;
+	padding-right: 0;
+	letter-spacing: 1px;
+	cursor: pointer;
+}
+#header.header-one .navbar-nav {
+	padding-top: 2px;
+	float: right;
+}
+#header.header-one .navbar-nav > li {
+	margin-left: 46px;
+	position: relative;
+}
+.sub-menu {
+	position: absolute;
+	width: 180px;
+	left: -9999px;
+	top: 115px;
+	opacity: 0;
+	list-style-type: none;
+	background: #d5d5d5;
+	transition: top 0.3s ease 0s, opacity 0.3s ease 0s;
+	z-index: -1;
+}
+#header .navbar-nav > li:hover .sub-menu {
+	opacity: 1;
+	top: 50px;
+	left: auto;
+	right:0;
+	text-indent: 1px;
+	z-index: 9;
+	transition: top 0.3s ease 0s, opacity 0.3s ease 0s;
+}
+#header.header-two .navbar-nav > li:hover .sub-menu {
+	top: 30px;
+}
+#header.header-two .navbar {
+	margin-bottom: 0;
+}
+.blog #header .navbar-nav > li:hover .sub-menu {
+	top: 65px;
+	left: 17px;
+}
+.sub-menu a {
+	padding: 10px 13px !important;
+	display: block;
+	border-bottom: 1px solid rgba(0,0,0,0.1);
+}
+.sub-menu li:last-child a {
+	border-bottom: 1px solid transparent;
+}
+.header-two .navbar-nav .sub-menu li {
+	margin-right: 0;
+}
+#header.header-one .navbar-nav > li:first-child {
+	margin-left: 0;
+}
+#header.header-one .navbar {
+	margin-bottom: 0;
+}
+/*=============================================================================Header-two style===============================================================*/
+.header-two .navbar-nav li  a {
+	color: #202020;
+	font-size: 13.5px;
+	text-transform: uppercase;
+	padding: 0;
+	cursor: pointer;
+}
+.header-two .navbar-nav > li {
+	margin-right: 52px;
+	padding-bottom: 20px;
+}
+.header-two {
+	padding: 30px 0 7px;
+	background: #ffffff;
+}
+.space {
+	padding: 0 0 0 63px;
+}
+.header-two .navbar {
+	min-height: 31px;
+}
+.header-two .logo {
+	display: block;
+	position: absolute;
+	top: -5px;
+	left: 0;
+	right: 0;
+	margin: 0 auto;
+	width: 27px;
+}
+.header-two .logo:after{
+	position: absolute;
+	left:5px;
+	right:0;
+	background: #fff;
+	height: 15px;
+	width:15px;
+	bottom: -30px;
+	content: '';
+	transform: rotate(-42deg);
+	z-index: 999;
+}
+.padding-right {
+	padding-right: 30px;
+}
+/*=============================================================================Header-three style===============================================================*/
+.homepage-three .navbar-nav li  a{
+	cursor: pointer;
+}
+.header-three .logo, .header-three .social-media-wrap li {
+	float: left;
+}
+.header-three .social-media-wrap {
+	float: right;
+}
+.header-three .social-media-wrap li a {
+	height: 40px;
+	width: 40px;
+	background: transparent;
+}
+.header-three .social-media-wrap li a i {
+	font-size: 15px;
+	line-height: 37px;
+}
+.header-three .social-media-wrap li:last-child a {
+	margin-right: 0;
+}
+.header-three {
+	padding: 38px 0 32px;
+	position: absolute;
+	left: 0;
+	right: 0;
+	margin: 0 auto;
+	z-index: 9999;
+}
+
+/*
+ 6.) Footer Styles
+ ------------------------------*/
+.footer-one {
+	padding: 58px 0 57px;
+	background: #ffd658;
+}
+.social-media-wrap {
+	text-align: center;
+	margin-bottom: 22px;
+}
+.social-media-wrap a {
+	border: 1px solid #636363;
+	border-radius: 83px;
+	display: inline-block;
+	height: 48px;
+	margin: 0 5px 0px 0;
+	width: 48px;
+	color: #ffffff;
+	font-size: 16px;
+	background: #202020;
+	text-align: center;
+	margin-right: 5px;
+}
+.social-media-wrap a i {
+	line-height: 48px;
+}
+.copy-right {
+	font-size: 14px;
+	color: #868686;
+	font-family: 'noto_serifregular';
+	text-align: center;
+	line-height: 20px;
+}
+.copy-right a {
+	color: #ffffff;
+}
+.no-padding {
+	padding-left: 0;
+	padding-right: 0;
+}
+.nav-tabs > li > a:hover {
+	border-color: transparent;
+}
+.error {
+	border: 1px solid red !important;
+}
+

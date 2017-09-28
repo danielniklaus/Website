@@ -1,0 +1,862 @@
+/* #Media Queries
+================================================== */
+
+	@media screen and (max-width: 1200px) {
+		
+		/* -------------------------------------------------- */
+		/*	Social Share
+		/* -------------------------------------------------- */	
+		
+			.social-like,
+			.social-share { padding: 0; }
+		
+			.social-like  { border-right-width: 0; }
+			.social-share { padding-right: 5px; }
+		
+			.side-share { display: block; }
+			
+			.post-footer .side-share { 
+				display: inline-block; 
+				padding-left: 10px;
+			}
+
+		/* ---------------------------------------------------------------------- */
+		/*	Widgets + Shortcodes
+		/* ---------------------------------------------------------------------- */
+
+			/* -------------------------------------------------- */
+			/*	Social Icons
+			/* -------------------------------------------------- */
+
+			ul.social-icons li a {
+				width: 40px;
+				height: 40px;
+			}
+			
+			/* Style Fall Vertical */
+			
+			ul.style-fall li a:before, 
+			ul.style-fall li a:after {
+				font-size: 19px;
+				line-height: 40px;
+			}	
+			
+	}
+
+	@media screen and (min-width: 993px) and (max-width: 1200px) {
+		
+		/* -------------------------------------------------- */
+		/*	Mini Contacts
+		/* -------------------------------------------------- */	
+
+			.mini-contacts li { margin-right: 13px; }
+			
+		/* ---------------------------------------------------------------------- */
+		/*	Portfolio
+		/* ---------------------------------------------------------------------- */	
+				
+			/* -------------------------------------------------- */
+			/*	Portfolio Items
+			/* -------------------------------------------------- */
+
+				.portfolio-items.col-5 article,
+				.portfolio-items.col-6 article { width: 33.33333333333333%; }	
+			
+		/* ---------------------------------------------------------------------- */
+		/*	Section
+		/* ---------------------------------------------------------------------- */	
+			
+			/* -------------------------------------------------- */
+			/* Cycle Rotator
+			/* -------------------------------------------------- */	
+
+				.cycle-rotator .item h1 {
+					font-size: 50px;
+				}		
+		
+		/* ---------------------------------------------------------------------- */
+		/*	Blog
+		/* ---------------------------------------------------------------------- */	
+		
+			/* -------------------------------------------------- */
+			/*	Masonry Blog 
+			/* -------------------------------------------------- */
+				
+	}
+
+	/* Smaller than standard 992 (devices and browsers) */
+	@media only screen and (max-width: 992px) {
+		
+			/* -------------------------------------------------- */
+			/*	Social Icons
+			/* -------------------------------------------------- */
+
+				#top-bar ul.social-icons {
+					float: none;
+					margin-bottom: 7px;
+					text-align: center;
+				}
+		
+		/* ---------------------------------------------------------------------- */
+		/*	Header
+		/* ---------------------------------------------------------------------- */
+		
+			.header-type-out .header-out,
+			.header-type-in .header-in,
+			.header-type-fixed .header-in { padding: 5px 0; }
+			
+			.header-type-fixed .header-shrink-fixed .header-in { padding-top: 5px; }
+		
+			/* -------------------------------------------------- */
+			/*	Mobile Menu
+			/* -------------------------------------------------- */
+		
+			#mobile-advanced {
+				position: absolute;
+				top: 0;
+				right: -100%;
+				z-index: 101;
+				overflow: hidden;
+				display: block;
+				width: 100%;
+				height: 100%;
+				background-color: #fff;
+				pointer-events: none;
+				
+				
+				-webkit-transform-origin: 0 0;
+						  transform-origin: 0 0;
+				
+				-webkit-transition: -webkit-transform .35s ease;
+						  transition: transform .35s ease;
+				
+				-webkit-transform: translateX(0);
+						  transform: translateX(0);
+			}
+			
+			#wrapper.active .mobile-advanced {
+				pointer-events: auto;
+				
+				-webkit-transform: translate(-100%, 0);
+						  transform: translate(-100%, 0);
+			}
+
+				.mobile-advanced > ul { padding-top: 80px; }
+
+					.mobile-advanced li {
+						display: block;
+						list-style: none;
+					}
+
+						.mobile-advanced li > span {
+							display: block;
+							padding: 10px 15px;
+							color: #262626;
+							font-weight: 400;
+						}
+
+						.mobile-advanced li a {
+							display: block;
+							padding: 10px 20px;
+							border-bottom: 1px solid #ccc;
+							line-height: 1.15em;
+						}
+
+						.mobile-advanced > ul > li > a {
+							border-bottom-width: 0;
+							background-color: #f85c37;
+							color: #fff;
+							font-weight: 400;
+							font-size: 16px;
+						}	
+
+						.mobile-advanced ul ul li > a { padding-left: 30px; }
+
+						.mobile-advanced ul ul li > a:before {
+							position: relative;
+							top: -2px;
+							margin-right: 5px;
+							font-size: 8px;
+							font-family: 'fontello';
+							content: "\e9a4";
+						}
+						
+						.mobile-advanced ul .mega-menu ul li > a:before { content: "\e9a4  \e9a4"; }
+						
+							.mobile-advanced ul ul ul li > a	     { padding-left: 55px; }
+							.mobile-advanced ul .mega-menu ul li > a { padding-left: 35px; }
+					
+				#advanced-menu-hide {
+					position: fixed;
+					top: 20px;
+					right: 30px;
+					z-index: 105;
+					width: 40px;
+					height: 40px;
+					background-color: #f85c37;
+					text-align: center;
+					
+					-webkit-backface-visibility: hidden;
+							backface-visibility: hidden;
+					-webkit-border-radius: 6px;
+							border-radius: 6px;	
+				}
+				
+				#wrapper.active #advanced-menu-hide {
+					visibility: visible;
+					pointer-events: auto;
+					
+					-webkit-transform: translateX(0);
+							transform: translateX(0);
+				}
+				
+				#advanced-menu-hide:after {
+					color: #fff;
+					content: '\efc0';
+					vertical-align: middle;
+					text-align: center;
+					font-size: 21px;
+					font-family: 'fontello';
+					line-height: 40px;
+				}
+
+			/* -------------------------------------------------- */
+			/* Search Box
+			/* -------------------------------------------------- */	
+
+				.mobile-advanced .search-icon { display: none; }
+
+				.mobile-advanced .inner-tooltip {
+					position: relative;
+					display: block;
+					padding: 10px;
+					width: 100%;
+				}
+				
+					.mobile-advanced .inner-tooltip label { display: block; }
+				
+						.mobile-advanced #searchform input[type="text"] {
+							padding: 8px 15px;
+							width: 100%;
+						}
+				
+			/* -------------------------------------------------- */
+			/*	Main Navigation
+			/* -------------------------------------------------- */
+
+			.responsive-nav-button {
+				display: inline-block;
+				vertical-align: middle;
+			}	
+
+			#header #navigation {
+				position: absolute;
+				z-index: 999;
+				right: 0;
+				left: 0;
+				top: 100%;
+				display: none;
+				overflow: hidden;
+				margin-bottom: 7px;
+				padding-top: 0;
+				width: 100%;
+				background-color: #fff;
+				
+				-webkit-border-radius: 3px;
+						border-radius: 3px;
+			}
+			
+			.navigation ul li {
+				display: block;
+				float: none;
+				margin: 2px;
+				padding-bottom: 0;
+			}
+
+				.navigation ul li > a {
+					padding: 10px 15px;
+					background-color: #262626;
+					color: #fff;
+					cursor: pointer;
+					font-weight: 400;
+					text-align: center;
+				}
+				
+				.navigation ul a:hover,
+				.navigation ul .current-menu-item > a,
+				.navigation ul .current-menu-parent > a,
+				.navigation ul .current-menu-ancestor > a,
+				.navigation ul .current_page_item > a,
+				.navigation ul .current_page_parent > a,
+				.navigation ul .current_page_ancestor > a { 
+					background-color: #f85c37;
+				}
+
+				.navigation ul a {
+					-webkit-border-radius: 3px;
+							border-radius: 3px;
+				}
+				
+				.navigation ul a:hover:after,
+				.navigation ul .current-menu-item > a:after,
+				.navigation ul .current-menu-parent > a:after,
+				.navigation ul .current-menu-ancestor > a:after,
+				.navigation ul .current_page_item > a:after,
+				.navigation ul .current_page_parent > a:after,
+				.navigation ul .current_page_ancestor > a:after { color: #00c2a9; }
+
+			/* Dropdown */
+			
+			.navigation ul ul {
+				position: relative;
+				display: none;
+				padding: 2px 10% 2px 10%;
+				width: 100%;
+				background-color: #ececec;
+				
+				-webkit-border-radius: 3px;
+						border-radius: 3px;  
+			}
+
+				.navigation ul ul a:hover,
+				.navigation ul ul .current-menu-item > a,
+				.navigation ul ul .current-menu-parent > a,
+				.navigation ul ul .current-menu-ancestor > a,
+				.navigation ul ul .current_page_item > a,
+				.navigation ul ul .current_page_parent > a,
+				.navigation ul ul .current_page_ancestor > a { color: #00c2a9; }
+
+		/* ---------------------------------------------------------------------- */
+		/*	Footer
+		/* ---------------------------------------------------------------------- */
+
+			/* -------------------------------------------------- */
+			/*	Bottom Footer
+			/* -------------------------------------------------- */	
+
+				.copyright { font-size: 11px; }
+				.developed { font-size: 10px; }	
+				
+	}
+
+	/* Tablet Portrait size to standard 960 (devices and browsers) */
+	@media only screen and (min-width: 768px) and (max-width: 992px) {
+		
+		/* ---------------------------------------------------------------------- */
+		/*	Content
+		/* ---------------------------------------------------------------------- */
+
+			/* -------------------------------------------------- */
+			/*  Extra Radius
+			/* -------------------------------------------------- */
+
+				.ls-layer .extra-radius {
+					margin: 0;
+					width: 280px;
+					height: 280px;
+				}	
+					
+					.ls-layer .inner-content h3 { font-size: 25px; }
+					
+			/* -------------------------------------------------- */
+			/* Cycle Rotator
+			/* -------------------------------------------------- */	
+
+				.cycle-rotator .item h1 { font-size: 55px; }	
+				
+			/* -------------------------------------------------- */
+			/*	Contacts
+			/* -------------------------------------------------- */
+
+			.contact-text {
+				display: inline-block;
+				width: 49%; 
+			}	
+			
+		/* ---------------------------------------------------------------------- */
+		/*	Blog
+		/* ---------------------------------------------------------------------- */	
+		
+			/* -------------------------------------------------- */
+			/*	Masonry Blog 
+			/* -------------------------------------------------- */
+			
+				.masonry .post-item,
+				.masonry.col-4 .post-item,
+				#main .masonry .post-item { 
+					width: 46%;
+				}
+				
+				.section > #post-area.masonry .post-item {
+					padding-left: 20px;
+					padding-right: 20px;
+				}	
+
+		/* ---------------------------------------------------------------------- */
+		/*	Portfolio
+		/* ---------------------------------------------------------------------- */	
+				
+			/* -------------------------------------------------- */
+			/*	Portfolio Items
+			/* -------------------------------------------------- */
+
+				.portfolio-items.col-4 article,
+				.portfolio-items.col-5 article,
+				.portfolio-items.col-6 article { width: 33.33333333333333%; }
+				
+			/* -------------------------------------------------- */
+			/*	Portfolio Single
+			/* -------------------------------------------------- */
+
+				.project-meta span { font-size: 12px; }
+
+		/* ---------------------------------------------------------------------- */
+		/*	Widgets + Shortcodes
+		/* ---------------------------------------------------------------------- */
+
+			/* -------------------------------------------------- */
+			/*	Content Box
+			/* -------------------------------------------------- */		
+
+				.content-boxes > ul > li { width: 50%; }		
+				
+	
+	}
+
+	/* All Mobile Sizes (devices and browser) */
+	@media only screen and (max-width: 767px) {
+		
+		/* -------------------------------------------------- */
+		/*	Typography
+		/* -------------------------------------------------- */
+
+			blockquote.quote-text { padding-left: 50px; }
+			
+			blockquote.quote-text:before {
+				left: -5px;
+				top: 8px;
+				font-size: 65px;
+			}
+		
+		/* -------------------------------------------------- */
+		/*	Contact and Comments Form
+		/* -------------------------------------------------- */
+
+			.inputs-block {
+				margin-right: 0;
+				width: 100%;
+			}
+
+			.textarea-block {
+				margin-left: 0;
+				width: 100%;
+			}
+
+			.full-inputs-block .input-block {
+				display: inline-block;
+				margin-left: 0;
+				width: 100%;
+			}
+
+				.full-textarea-block textarea { min-height: 160px; }
+						
+		/* ---------------------------------------------------------------------- */
+		/*	Top Bar
+		/* ---------------------------------------------------------------------- */
+		
+			/* -------------------------------------------------- */
+			/*	Mini Contacts
+			/* -------------------------------------------------- */		
+			
+			.mini-contacts { text-align: center; }
+			
+				.mini-contacts li {
+					display: block;
+					margin-right: 0;
+				}	
+
+		/* ---------------------------------------------------------------------- */
+		/*	Header
+		/* ---------------------------------------------------------------------- */	
+				
+			/* -------------------------------------------------- */
+			/*	Logo
+			/* -------------------------------------------------- */
+
+				#logo { 
+					padding: 10px 0;
+					max-width: 50%; 
+				}
+				
+				.header-type-out #logo {
+					padding: 30px 0;
+					display: block;
+					margin: 0 auto;
+					text-align: center;
+				}
+				
+			/* -------------------------------------------------- */
+			/*	Social Icons in Header
+			/* -------------------------------------------------- */
+
+				#header ul.social-icons { 
+					display: block;
+					padding-top: 0; 
+					text-align: center;
+				}
+
+		/* ---------------------------------------------------------------------- */
+		/*	Slider
+		/* ---------------------------------------------------------------------- */
+
+		/* ---------------------------------------------------------------------- */
+		/*	Page Header
+		/* ---------------------------------------------------------------------- */
+
+			.page-header h1 { font-size: 40px; }
+
+		/* ---------------------------------------------------------------------- */
+		/*	Main
+		/* ---------------------------------------------------------------------- */
+		
+			/* -------------------------------------------------- */
+			/* Slogan Title
+			/* -------------------------------------------------- */
+			
+			.section-title { margin-bottom: 30px; }
+
+				.section-title * { padding: 0; }
+
+				.section-title *:after,
+				.section-title *:before { display: none; }
+
+			/* -------------------------------------------------- */
+			/*	Clients
+			/* -------------------------------------------------- */			
+
+				.clients-items li { width: 50%; }
+				
+		/* ---------------------------------------------------------------------- */
+		/*	Blog
+		/* ---------------------------------------------------------------------- */	
+		
+			/* -------------------------------------------------- */
+			/*	Masonry Blog 
+			/* -------------------------------------------------- */
+			
+				#main > #post-area.masonry, 
+				.col-xs-12 > #post-area.masonry {
+					margin-left: 0;
+					margin-right: 0;
+				}
+			
+				.masonry .post-item,
+				.masonry.col-4 .post-item,
+				#main .masonry .post-item { 
+					margin-left: 0;
+					margin-right: 0;
+					padding-left: 0;
+					padding-right: 0;
+					width: 100%;
+				}
+				
+				.section > #post-area.masonry .post-item {
+					padding-left: 25px;
+					padding-right: 25px;
+				}
+				
+			/* -------------------------------------------------- */
+			/*	Comments
+			/* -------------------------------------------------- */
+
+			#comments { margin-left: 0; }	
+
+			/* -------------------------------------------------- */
+			/*	Respond
+			/* -------------------------------------------------- */
+
+			#respond { margin-left: 0; }
+
+				#respond input[type="text"],
+				#respond input[type="email"],
+				#respond input[type="url"] { width: 100%; }
+
+				#respond textarea {
+					width: 100%;
+					min-width: 100%;
+					min-height: 200px;
+				}	
+				
+		/* ---------------------------------------------------------------------- */
+		/*	Section
+		/* ---------------------------------------------------------------------- */
+		
+			/* -------------------------------------------------- */
+			/* Reading Box
+			/* -------------------------------------------------- */	
+
+				.reading-box { text-align: center; }
+				
+					.reading-box h3 { margin-bottom: 25px; }	
+					
+			/* -------------------------------------------------- */
+			/* Fullscreen
+			/* -------------------------------------------------- */	
+
+				.fullscreen-entry { padding: 2%; }	
+				
+			/* -------------------------------------------------- */
+			/* Cycle Rotator
+			/* -------------------------------------------------- */	
+
+				.cycle-rotator .item h1 { font-size: 29px; }	
+			
+			/* -------------------------------------------------- */
+			/* Pricing Tables
+			/* -------------------------------------------------- */	
+
+				.simple-pricing-table .column { 
+					margin-bottom: 20px;
+					width: 100%;
+				}
+
+				.simple-pricing-table.col-2 .column,
+				.simple-pricing-table.col-3 .column,
+				.simple-pricing-table.col-4 .column { width: 100%; }
+				
+				.simple-pricing-table .column:hover,
+				.simple-pricing-table .featured {
+					-webkit-transform: scale(1);
+							transform: scale(1);
+				}
+
+		/* ---------------------------------------------------------------------- */
+		/*	Blog
+		/* ---------------------------------------------------------------------- */	
+		
+		.entry-item .entry-meta {
+			position: relative;
+			left: auto;
+			top: auto;
+			margin-bottom: 10px;
+			width: auto;
+		}
+		
+		.entry-item .entry-body {
+			margin-left: 0;
+			margin-bottom: 25px;
+			padding-bottom: 25px;
+		}
+		
+			.entry-item .post-meta { margin-bottom: 15px; }
+
+		/* ---------------------------------------------------------------------- */
+		/*	Portfolio
+		/* ---------------------------------------------------------------------- */	
+				
+			/* -------------------------------------------------- */
+			/*	Portfolio Items
+			/* -------------------------------------------------- */
+
+				.portfolio-items.col-3 article,
+				.portfolio-items.col-4 article,
+				.portfolio-items.col-5 article,
+				.portfolio-items.col-6 article { width: 100%; }	
+				
+			/* -------------------------------------------------- */
+			/*	Portfolio Single
+			/* -------------------------------------------------- */	
+			
+			.project-single-entry + .tabs-holder { margin-bottom: 0; }
+			
+			/* Project Similar Posts */
+
+				.project-similar li { width: 50%; }
+				
+			/* -------------------------------------------------- */
+			/*	Image List
+			/* -------------------------------------------------- */	
+
+			.image-list { margin-bottom: 30px; }
+			
+		/* ---------------------------------------------------------------------- */
+		/*	Footer
+		/* ---------------------------------------------------------------------- */
+
+			/* -------------------------------------------------- */
+			/*	Bottom Footer
+			/* -------------------------------------------------- */	
+
+				.copyright, .developed { text-align: center; }
+				
+		/* ---------------------------------------------------------------------- */
+		/*	Widgets + Shortcodes
+		/* ---------------------------------------------------------------------- */
+
+			/* -------------------------------------------------- */
+			/*	Content Box
+			/* -------------------------------------------------- */		
+
+				.content-boxes > ul > li { width: 100%; }		
+
+			/* -------------------------------------------------- */
+			/*	Counter
+			/* -------------------------------------------------- */		
+
+				.counter-box .counter { 
+					margin: 15px 0;
+					width: 100%; 
+				}		
+		
+	}
+
+	/* Mobile Landscape Size to Tablet Portrait (devices and browsers) */
+	@media only screen and (min-width: 480px) and (max-width: 767px) {
+		
+		/* ---------------------------------------------------------------------- */
+		/*	Content
+		/* ---------------------------------------------------------------------- */
+
+			/* -------------------------------------------------- */
+			/*  Extra Radius
+			/* -------------------------------------------------- */
+
+			.extra-radius { 
+				width: 200px;
+				height: 200px;
+			}
+			
+				.inner-content h2 { 
+					margin-bottom: 10px;
+					font-size: 25px; 
+				}
+				
+				/* for Layer Slider */
+				
+				.ls-layer .extra-radius {
+					margin: 0;
+					width: 195px;
+					height: 195px;
+				}	
+					
+					.ls-layer .inner-content h3 { font-size: 17px; }	
+		
+		/* ---------------------------------------------------------------------- */
+		/*	Portfolio
+		/* ---------------------------------------------------------------------- */	
+				
+			/* -------------------------------------------------- */
+			/*	Portfolio Items
+			/* -------------------------------------------------- */
+
+				.portfolio-items.col-3 article,
+				.portfolio-items.col-4 article,
+				.portfolio-items.col-5 article,
+				.portfolio-items.col-6 article { width: 50%; }	
+		
+		/* ---------------------------------------------------------------------- */
+		/*	Widgets + Shortcodes
+		/* ---------------------------------------------------------------------- */
+
+			/* -------------------------------------------------- */
+			/*	Tabs
+			/* -------------------------------------------------- */
+
+				.tabs-nav li a { padding: 12px 20px; }
+
+			/* -------------------------------------------------- */
+			/*	Counter
+			/* -------------------------------------------------- */
+
+				.counter-box .counter { width: 50%; }
+
+				
+	}
+
+	/* Mobile Portrait Size to Mobile Landscape Size (devices and browsers) */
+	@media only screen and (max-width: 479px) {
+
+		/* ---------------------------------------------------------------------- */
+		/*	Content
+		/* ---------------------------------------------------------------------- */
+
+			/* -------------------------------------------------- */
+			/*  Extra Radius
+			/* -------------------------------------------------- */
+
+			.extra-radius { 
+				width: 260px;
+				height: 260px;
+			}
+			
+				.inner-content h2 { 
+					margin-bottom: 10px;
+					font-size: 35px; 
+				}
+				
+				/* for Layer Slider */
+
+				.ls-layer .extra-radius {
+					margin: 0;
+					width: 105px;
+					height: 105px;
+				}	
+					
+					.ls-layer .inner-content h3 { font-size: 10px; }
+		
+			/* -------------------------------------------------- */
+			/*	Portfolio Filter
+			/* -------------------------------------------------- */
+
+			.filter-container { text-align: left; }
+
+				.portfolio-filter li {
+					display: inline-block;
+					margin: 1%;
+					width: 48%;
+					text-align: center;
+				}
+				
+			/* -------------------------------------------------- */
+			/* Cycle Rotator
+			/* -------------------------------------------------- */	
+
+				.cycle-rotator .item h1 { font-size: 24px; }		
+					
+		/* ---------------------------------------------------------------------- */
+		/*	Blog
+		/* ---------------------------------------------------------------------- */
+		
+			.entry-item .entry-body { margin-left: 0; }
+			
+				.post-meta .entry-date:after {
+					padding: 0 2px 0 4px;
+					content: "/"
+				}	
+
+			/* -------------------------------------------------- */
+			/*	Masonry Blog 
+			/* -------------------------------------------------- */
+			
+				.section > #post-area.masonry .post-item {
+					padding-left: 20px;
+					padding-right: 20px;
+				}		
+				
+		/* ---------------------------------------------------------------------- */
+		/*	Widgets + Shortcodes
+		/* ---------------------------------------------------------------------- */
+
+			/* -------------------------------------------------- */
+			/*	Tabs
+			/* -------------------------------------------------- */
+
+			.tabs-nav li { width: 50%; }
+			
+			/* -------------------------------------------------- */
+			/*	Clients
+			/* -------------------------------------------------- */			
+
+				.clients-items li { padding: 0 5%; }		
+
+	}
